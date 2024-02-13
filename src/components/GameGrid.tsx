@@ -9,9 +9,11 @@ interface Props {
   gameQuery: GameQuery;
 }
 
+const generateArray = (length: number): number[] =>
+  Array.from({ length }, (_, index) => index + 1);
+
 const GameGrid = ({ gameQuery }: Props) => {
   const { data, error, isLoading } = useGames(gameQuery);
-  const skeletons = [1, 2, 3, 4, 5, 6];
 
   if (error) return <Text>{error}</Text>;
 
@@ -22,7 +24,7 @@ const GameGrid = ({ gameQuery }: Props) => {
       spacing={6}
     >
       {isLoading &&
-        skeletons.map((skeleton) => (
+        generateArray(20).map((skeleton) => (
           <GameCardContainer key={skeleton}>
             <GameCardSkeleton />
           </GameCardContainer>
