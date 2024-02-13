@@ -30,16 +30,24 @@ const PlatformList = ({ platforms }: Props) => {
     web: BsGlobe,
     android: FaAndroid,
   };
+  if (!platforms)
+    return (
+      <>
+        <p className="text-2xl">No platforms</p>
+      </>
+    );
   return (
     <>
       <HStack marginY={1}>
-        {platforms.map((platform) => (
-          <Icon
-            as={iconMap[platform.slug]}
-            color="gray.500"
-            key={platform.id}
-          />
-        ))}
+        {platforms.map((platform) => {
+          return (
+            <Icon
+              as={iconMap[platform.slug]}
+              color="gray.500"
+              key={platform.id}
+            />
+          );
+        })}
       </HStack>
     </>
   );
