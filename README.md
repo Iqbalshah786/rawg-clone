@@ -1,30 +1,23 @@
-# React + TypeScript + Vite
+# Rawg clone
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Rawg is a video game discovery web app that helps you find new and interesting games to play. With this react rawg clone built with best approaches, you can search for games by platform, genre, and more. Rawg original web app : https://rawg.io/
 
-Currently, two official plugins are available:
+# Getting Started #
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+To get started with this project, follow these steps:
 
-## Expanding the ESLint configuration
+* Clone this repository to your local machine.
+* Run ```npm install``` to install the required dependencies.
+* Get a RAWG API key at https://rawg.io/apidocs. You'll have to create an account first.
+* Add the API key to src/services/api-client.ts
+* Run ```npm run dev``` to start the web server.
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
 
-- Configure the top-level `parserOptions` property like this:
+# Languages and tools 
+[![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
+ - A typed superset of JavaScript that compiles to plain JavaScript.
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
-```
+[![Chakra UI](https://img.shields.io/badge/Chakra%20UI-319795?style=for-the-badge&logo=chakra-ui&logoColor=white)](https://chakra-ui.com/)
+ - Chakra UI is a simple, modular and accessible component library that gives you the building blocks you need to build your React applications. Learn more at https://chakra-ui.com/
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+
